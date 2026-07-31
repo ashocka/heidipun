@@ -1,0 +1,110 @@
+body {
+    background-color: $color-background;
+    color: $color-text;
+    font-display: optional;
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight-regular;
+    line-height: $line-height;
+    text-align: left;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    color: $color-background;
+    font-family: $font-family-heading;
+    font-weight: $font-weight-bold;
+    line-height: 1.1;
+    margin: 0;
+}
+
+h1 {
+    font-size: 4.375em;
+    line-height: 1.18;
+
+    @include breakpoint(md) {
+        font-size: 3.75em;
+    }
+
+    @include breakpoint(sm) {
+        font-size: 2.625em;
+    }
+}
+
+h2 {
+    font-size: 3.75em;
+    line-height: 1.35;
+
+    @include breakpoint(md) {
+        font-size: 3.125em;
+    }
+
+    @include breakpoint(sm) {
+        font-size: 2.25em;
+    }
+}
+
+h3 {
+    font-size: 2.18em;
+    line-height: 1.2;
+
+    @include breakpoint(md) {
+        font-size: 1.8em;
+    }
+
+    @include breakpoint(sm) {
+        font-size: 1.3em;
+    }
+}
+
+h4 {
+    font-size: 1.5em;
+    font-weight: $font-weight-regular;
+    line-height: 1.16;
+
+    @include breakpoint(md) {
+        font-size: 1.25em;
+    }
+
+    @include breakpoint(sm) {
+        font-size: .9em;
+    }
+}
+
+a {
+
+    @include link-color($color-link-default, $color-link-hover, none, underline);
+	transition: all .3s ease;
+
+	&:focus {
+		outline: none;
+	}
+
+}
+
+p {
+    margin: 0 0 20px;
+
+    @include breakpoint(xs) {
+        margin: 0 0 15px;
+    }
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+b,
+bold,
+strong {
+    font-weight: $font-weight-bold;
+}
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid $color-hr;
+    margin: $margin auto;
+	padding: 0;
+}

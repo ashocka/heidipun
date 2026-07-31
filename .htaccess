@@ -1,0 +1,24 @@
+
+RewriteOptions inherit
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^heidipun\.ashocka\.com$
+RewriteRule ^/?$ "https\:\/\/heidipun\.com\/" [R=301,L]
+
+RewriteEngine On
+
+RewriteCond %{REMOTE_ADDR} =93.103.77.67
+RewriteRule ^contact\.html$ - [F,NC]
+<Files 403.shtml>
+order allow,deny
+allow from all
+</Files>
+
+deny from 2a01:0261:029d:a700:8c2e:6d09:6af2:8be9
+RewriteCond %{HTTP_HOST} ^heidi\.si$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.heidi\.si$
+RewriteRule ^/?$ "https\:\/\/heidipun\.com\/" [R=301,L]
+
+deny from 46.164.43.61

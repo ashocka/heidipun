@@ -1,0 +1,39 @@
+.button {
+    @include link-color(#fff, #fff, none, none);
+    background: #FC69FF;
+    border-radius: 20px;  
+    box-shadow: 0px 7px 12px rgba(0, 0, 0, 0.15);
+    display: inline-block;
+    font-family: $font-family-heading;
+    font-size: 30px;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.14em;
+    line-height: 1.2;
+    padding: 27px 44px 28px 42px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+
+    &:hover {
+        background: #FD95FF;
+        box-shadow: 0px 7px 12px 3px rgba(0, 0, 0, 0.15);
+        transform: scale(1.1);
+    }
+
+    &:focus {
+        background: #CD5BCF;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+        transform: scale(1);
+    }
+
+    @include breakpoint(md) {
+        font-size: 26px;
+    }
+
+    @include breakpoint(sm) {
+        font-size: 20px;
+        padding: 18px 0 17px;
+        display: block;
+        line-height: 1.8;
+    }
+}

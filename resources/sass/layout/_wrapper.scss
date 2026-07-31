@@ -1,0 +1,10 @@
+.wrapper {
+	background-color: #E5E5E5;
+	overflow-x: hidden;
+	padding: 20px 15px;
+	width: 100%;
+
+	@include breakpoint(md) {
+		padding: 13px 10px;
+	}
+}
